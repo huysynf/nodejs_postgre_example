@@ -12,8 +12,8 @@ const { getData } = require('../services/postgre.service');
 // };
 
 exports.getData = async (req, res) => {
-  await getData();
-  return res.json({ data: 'result', status: httpStatus.OK });
+  const data = await getData();
+  return res.json({ data, status: httpStatus.OK });
 };
 
 exports.validateSalesPromotionItemData = async (req, res) => res.status(httpStatus.OK);
