@@ -1,5 +1,5 @@
 const express = require('express');
-const databricksRoute = require('./databricks.route');
+const databricksRoute = require('./postgre.route');
 
 const router = express.Router();
 
