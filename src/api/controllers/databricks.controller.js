@@ -1,6 +1,6 @@
 const httpStatus = require('http-status');
-const { omit } = require('lodash');
-
+// const { omit } = require('lodash');
+const { getData } = require('../services/postgre.service');
 // exports.createSaleForecastItemData = async (req, res) => {
 //   try {
 //     const dataCreate = omit(req.body);
@@ -11,8 +11,8 @@ const { omit } = require('lodash');
 //   }
 // };
 
-exports.testpostgre = async (req, res) => {
-  await testpostgre();
+exports.getData = async (req, res) => {
+  await getData();
   return res.json({ data: 'result', status: httpStatus.OK });
 };
 
