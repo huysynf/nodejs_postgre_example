@@ -19,7 +19,8 @@ exports.all = async () => await pool.query('select * from salesperformanceandfor
 // eslint-disable-next-line consistent-return
 exports.create = async (dataCreate) => {
   if (dataCreate.length > 1) {
-    const data = JSON.parse(dataCreate.slice(1, -1));
+    console.log(JSON.parse(dataCreate));
+    const data = JSON.parse(dataCreate);
     try {
       await pool.query(format('INSERT INTO salesperformanceandforecast  VALUES %L', data))
         .then((res) => {
